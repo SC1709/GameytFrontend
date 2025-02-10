@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Mania Metal";
+  src: url("./assets/fonts/Metal_Mania/MetalMania-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.monsterGame-container {
+  font-family: "Mania Metal", sans-serif;
+}

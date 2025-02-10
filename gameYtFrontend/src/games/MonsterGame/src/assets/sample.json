@@ -1,0 +1,44 @@
+[
+  {
+    "correctOptionsIndex": 0,
+    "options": ["Guido van Rossum", "Brendan Eich", "Tim Berners-Lee", "Linus Torvalds"],
+    "question": "Who created JavaScript in 1995?",
+    "chunkIndex": 0
+  },
+  {
+    "correctOptionsIndex": 0,
+    "options": ["Cappuccino", "Espresso", "Latte", "Mocha"],
+    "question": "What was JavaScript originally named?",
+    "chunkIndex": 0
+  },
+  {
+    "correctOptionsIndex": 0,
+    "options": ["SpiderMonkey Engine", "ChakraCore Engine", "Nitro Engine", "V8 Engine"],
+    "question": "Which engine uses a just-in-time compiler for JavaScript?",
+    "chunkIndex": 0
+  },
+  {
+    "correctOptionsIndex": 0,
+    "options": ["Parallel processing threads", "Non-blocking event loop", "Blocking synchronous calls", "Multi-threading model"],
+    "question": "How does JavaScript handle I/O operations efficiently despite being single-threaded?",
+    "chunkIndex": 0
+  },
+  {
+    "correctOptionsIndex": 0,
+    "options": ["Node.js runtime", "Tomcat server", "Apache server", "IIS server"],
+    "question": "In which environment can you run server-side JavaScript code?",
+    "chunkIndex": 0
+  },
+  {
+    "correctOptionsIndex": 0,
+    "options": ["Reassignable variable declaration", "Constant value assignment", "Event listener attachment", "Function definition keyword"],
+    "question": "What is the purpose of 'let' in JavaScript variables?",
+    "chunkIndex": 0
+  },
+  {
+    "correctOptionsIndex": 0,
+    "options": ["Immediate functions", "Blocking callbacks", "Async/await syntax", "Synchronous loops"],
+    "question": "Which syntax supports asynchronous programming in JavaScript?",
+    "chunkIndex": 0
+  }
+]

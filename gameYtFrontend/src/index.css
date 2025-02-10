@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #fafafa;
+}
+
+.image-container img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  mix-blend-mode: multiply; /* Blend image with background */
+}
+
+/* HTML: <div class="parent-container"><div class="loader"></div></div> */
+/* Parent container to center the loader */
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Full viewport height */
+}
+
+/* Loader styles */
+.loader {
+  display: flex;
+  width: 50px;
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: -10px 0 0 -10px;
+  width: 25px;
+  aspect-ratio: 1;
+  background: #3bc3ba;
+  animation: l1-1 2s infinite, l1-2 0.5s infinite;
+}
+
+.loader:after {
+  background: #ff6f1c;
+  animation-delay: -1s, 0s;
+}
+
+@keyframes l1-1 {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 100%;
+    left: 0;
+  }
+  50% {
+    top: 100%;
+    left: 100%;
+  }
+  75% {
+    top: 0;
+    left: 100%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes l1-2 {
+  80%,
+  100% {
+    transform: rotate(0.5turn);
+  }
+}
+
+/* for correct and incorrect answer */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce {
+  animation: bounce 0.5s ease;
+}
+
+/* stars*/
+
+@keyframes stars-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.stars {
+  position: relative;
+}
+
+.stars::before,
+.stars::after {
+  content: "★";
+  position: absolute;
+  font-size: 30px;
+  color: rgb(255, 174, 61);
+  animation: stars-animation 1s ease-in-out infinite;
+}
+
+.stars::before {
+  top: 15px;
+  left: -40px;
+  animation-delay: 0s;
+}
+
+.stars::after {
+  bottom: 15px;
+  right: -40px;
+  animation-delay: 0.5s;
+}
+
+.stars .star1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 25px;
+  color: rgb(255, 184, 61);
+  animation: stars-animation 1s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.stars .star2 {
+  position: absolute;
+  bottom: 20px;
+  left: 30%;
+  font-size: 25px;
+  color: rgb(255, 184, 61);
+  animation: stars-animation 1s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.stars .star3 {
+  position: absolute;
+  top: 10px;
+  left: 70%;
+  font-size: 25px;
+  color: rgb(251, 168, 26);
+  animation: stars-animation 1s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* .question-page > * {
+  outline: 2px solid;
+} */
+
+/* .carousel-container > * {
+  outline: 2px solid;
+} */
+
+.question-page,
+.question-page > * {
+  /* outline: 2px solid; */
+  width: 100%;
+}
+
+@media screen and (max-width: 420px) {
+  /* .question-page {
+    flex-wrap: wrap;
+    border: 2px solid;
+  } */
+
+  .carousel-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .carousel-item {
+    width: 90%;
+  }
+
+  .question-description {
+    font-size: 5vw;
+    word-break: keep-all;
+  }
+
+  .question-container {
+    height: 22rem;
+    width: 100%;
+  }
+
+  .question-img {
+    position: absolute;
+    width: 80%;
+    bottom: -60px;
+    height: auto;
+  }
+
+  .yt-frame {
+    height: 280px;
+  }
+
+  .prev-btn,
+  .next-btn {
+    bottom: 15%;
+  }
+}
+
+@media screen and (max-width: 1051px) {
+  .question-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .questions-details-container {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+/* * {
+  outline: 2px solid;
+} */
